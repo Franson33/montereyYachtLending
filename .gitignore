@@ -1,0 +1,19 @@
+	## Project static
+/node_modules/*
+/vendor/*
+config.php
+gulpconfig.js
+.bash_history
+.cache
+.gitconfig
+access_log
+error_log
+
+## OS or IDE files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+.idea
+ehthumbs.db
+Thumbs.db
