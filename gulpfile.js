@@ -15,7 +15,7 @@ const path = {
         html: 'docs/',
         js: 'docs/js/',
         css: 'docs/css/',
-        img: 'D:/Server/domains/monterey.loc/public/img/'
+        img: 'D:/Server/domains/monterey.loc/docs/img/'
     },
     src: {
         html: 'src/index.html',
