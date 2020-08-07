@@ -12,9 +12,9 @@ const rimraf = require('rimraf');
 
 const path = {
     build: {
-        html: 'public/',
-        js: 'public/js/',
-        css: 'public/css/',
+        html: 'docs/',
+        js: 'docs/js/',
+        css: 'docs/css/',
         img: 'D:/Server/domains/monterey.loc/public/img/'
     },
     src: {
@@ -29,7 +29,7 @@ const path = {
         style: 'src/style/style.css',
         img: 'D:/Server/domains/monterey.loc/src/image/**/*.*',
     },
-    clean: './public'
+    clean: './docs'
 };
 
 gulp.task('clean', function (cb) {
