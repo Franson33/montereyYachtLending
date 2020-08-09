@@ -14,6 +14,11 @@
     text-decoration: none;
     outline: none;
     color: inherit;
+
+    background: linear-gradient(-1deg, transparent 22%, rgba(255, 0, 0, 0.3) 24%, rgba(255, 0, 0, 0.5) 27%, rgba(255, 0, 0, 0.3) 29%, transparent 32%, transparent 100%);
+    background-repeat: no-repeat;
+    background-size: 95% 100%;
+    background-position: center;
 }
 
 .button--clear {
@@ -31,6 +36,12 @@
 
 .element--hover:hover {
   opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.element--focus:focus {
+  opacity: 0.5;
+  transform: scale(1.1);
 }
 
 .shadow--two {
@@ -39,6 +50,10 @@
 
 .shadow--one {
   filter: drop-shadow(0 0 1px black);
+}
+
+.shadow--back {
+  background: linear-gradient(to bottom, transparent , rgba(0,0,0,.1) 25%, transparent 120%);
 }
 
 .body {
@@ -115,7 +130,8 @@
   justify-content: space-between;
   width: 100%;
   height: auto;
-  background: url(../img/background/teak.jpg) repeat ;
+  background: url(../img/background/teak.jpg) repeat;
+  outline: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .main-container_main-item:first-child {
@@ -187,14 +203,32 @@
   padding: 0 20px;
   border: 2px solid white;
   cursor: pointer;
+
+  background: linear-gradient(-1deg, transparent 22%, rgba(255, 0, 0, 0.2) 24%, rgba(255, 0, 0, 0.8) 27%, rgba(255, 0, 0, 0.1) 29%, transparent 32%, transparent 100%);
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .contact--button:hover {
   background: white;
   color: black;
+  transform: scale(1.1);
+}
+
+.contact--button:focus {
+  background: white;
+  color: black;
+  transform: scale(1.1);
 }
 
 .contact--button:hover .contact-button_button-text {
+  color: black;
+  font-weight: 700;
+  filter: none;
+}
+
+.contact--button:focus .contact-button_button-text {
   color: black;
   font-weight: 700;
   filter: none;
@@ -204,6 +238,8 @@
   margin: auto;
   color: white;
   font-size: 1.5vw;
+
+
 }
 
 .main-item_go-links-box {
@@ -233,7 +269,6 @@
   border-image-slice: 445 432 440 478  fill;
   border-image-outset: 65px;
   border-image-width: 100px;
-
 }
 
 .slider_stage {
@@ -274,6 +309,10 @@
 }
 
 .main-item_gallery:hover .control-buttons_button {
+  visibility: visible;
+}
+
+.control-buttons_button:focus {
   visibility: visible;
 }
 
@@ -619,7 +658,7 @@
 
   .logo-box_image {
     margin: auto;
-    width: 50vw;
+    width: 45vw;
   }
 
 
@@ -672,7 +711,7 @@
   }
 
   .main-item_gallery {
-    width: 84vw;
+    width: 82vw;
     height: auto;
     border-image-outset: 27px;
     border-image-width: 41px;
