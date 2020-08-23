@@ -16,17 +16,17 @@
     <header class="header">
       <div class="wrapper">
         <div class="header-container">
-          <div class="logo-box">
-            <img class="logo-box_image" src="img/logo/logo.svg" alt="Логотип яхты Кристал">
+          <div class="logo-box" aria-lable="Yacht logo" tabindex="1">
+            <img class="logo-box_image shadow--one" src="img/logo/logo.svg" alt="Логотип яхты Кристал">
           </div>
           <div class="contact-box">
-            <div class="contact-box__telephone-number ">
-                <a class="telephone-number__text link element--hover element--focus" href="tel:+380631234567">+66994396566</a>
+            <div class="contact-box__telephone-number">
+                <a class="telephone-number__text link element--hover element--focus shadow--one" href="tel:+380631234567">+66994396566</a>
             </div>
             <div class="contact-box__social-bar">
-              <a class="social-bar__social-icon link element--hover element--focus" title="Whatsapp" href="https://wa.me/380666708930?" target="_blank"><i class="social-icon_logo fab fa-whatsapp"></i></a>
-              <a class="social-bar__social-icon link element--hover element--focus" title="Telegram" href="https://msng.link/o/?https://msng.link/o/?380666708930=vi=tg" target="_blank"><i class="social-icon_logo fab fa-telegram-plane"></i></a>
-              <a class="social-bar__social-icon link element--hover element--focus" title="viber" href="https://msng.link/o/?380666708930=vi" target="_blank"><i class="social-icon_logo fab fa-viber"></i></a>
+              <a class="social-bar__social-icon link element--hover element--focus shadow--one" title="Whatsapp" href="https://wa.me/380666708930?" target="_blank"><i class="social-icon_logo fab fa-whatsapp"></i></a>
+              <a class="social-bar__social-icon link element--hover element--focus shadow--one" title="Telegram" href="https://msng.link/o/?https://msng.link/o/?380666708930=vi=tg" target="_blank"><i class="social-icon_logo fab fa-telegram-plane"></i></a>
+              <a class="social-bar__social-icon link element--hover element--focus shadow--one" title="viber" href="https://msng.link/o/?380666708930=vi" target="_blank"><i class="social-icon_logo fab fa-viber"></i></a>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@
               </div>
             </div>
             <div class="main-item_main-button-box">
-              <button class="main-button-box_contact-button contact--button button--clear shadow--one JS-contact-button-1" type="button" name="contact-contact">
+              <button class="main-button-box_contact-button contact--button button--clear shadow--one" id="JS-contact-button-1" type="button" name="contact-contact">
                 <p class="contact-button_button-text shadow--one">УТОЧНИТЬ ИЛИ ЗАКАЗАТЬ</p>
               </button>
             </div>
@@ -64,11 +64,11 @@
           </div>
           <div class="main-container_main-item">
             <div class="main-item_photo-anchor" id="photo"></div>
-            <div class="main-item_gallery JS-gallery-container" tabindex="0">
+            <div class="main-item_gallery" id="JS-gallery-container" aria-label="Slider-gallery contain photos of yacht" tabindex="0">
               <div class="gallery_slider">
-                <div class="slider_stage JS-stage">
+                <div class="slider_stage" id="JS-stage">
                   <div class="stage_image-box">
-                    <img class="image-box_image" src="img\gallery\gallery.jpeg" alt="Фотография яхты">
+                    <img class="image-box_image " src="img\gallery\gallery.jpeg" alt="Фотография яхты">
                   </div>
                   <div class="stage_image-box">
                     <img class="image-box_image" src="img\gallery\gallery1.jpeg" alt="Фотография яхты">
@@ -109,14 +109,14 @@
                 </div>
               </div>
               <div class="gallery_control">
-                <div class="control_control-buttons">
-                  <button class="control-buttons_button button--clear JS-button-left" type="button" name="gallery-button-left" tabindex="-1">
+                <div class="control_control-buttons" id="JS-gallery-buttons">
+                  <button class="control-buttons_button button--clear" id="JS-button-left" type="button" name="gallery-button-left" tabindex="-1">
                     <svg class="button_svg" viewbox="0 0 20 40" preserveAspectRatio="none">
                         <line x1="5" y1="20" x2="15" y2="5" stroke="RGBA(255, 255, 255, 1)" stroke-width="5" stroke-linecap="round"></line>
                         <line x1="5" y1="20" x2="15" y2="35" stroke="RGBA(255, 255, 255, 1)" stroke-width="5" stroke-linecap="round"></line>
                     </svg>
                   </button>
-                  <button class="control-buttons_button button--clear JS-button-right" type="button" name="gallery-button-right" tabindex="-1">
+                  <button class="control-buttons_button button--clear" id="JS-button-right" type="button" name="gallery-button-right" tabindex="-1">
                     <svg class="button_svg" viewbox="0 0 20 40" preserveAspectRatio="none">
                         <line x1="5" y1="5" x2="15" y2="20" stroke="RGBA(255, 255, 255, 1)" stroke-width="5" stroke-linecap="round"></line>
                         <line x1="5" y1="35" x2="15" y2="20" stroke="RGBA(255, 255, 255, 1)" stroke-width="5" stroke-linecap="round"></line>
@@ -322,14 +322,14 @@
             </div>
           </div>
           <div class="main-item_spec-item">
-            <button class="spec-item_contact-button contact--button button--clear shadow--one JS-contact-button-2" type="button" name="contact-contact">
+            <button class="spec-item_contact-button contact--button button--clear shadow--one" id="JS-contact-button-2" type="button" name="contact-contact">
               <p class="contact-button_button-text shadow--one shadow--back">УТОЧНИТЬ ИЛИ ЗАКАЗАТЬ</p>
             </button>
           </div>
         </div>
         <div class="main-container_main-item">
-          <div class="main-item_main-background JS-modal">
-            <button class="main-background_close-button button--clear element--hover element--focus JS-close-button">
+          <div class="main-item_main-background" id="JS-modal">
+            <button class="main-background_close-button button--clear element--hover element--focus" id="JS-close-button">
               <svg class="close-button_svg shadow--two" viewbox="0 0 40 40" preserveAspectRatio="none">
                   <line x1="5" y1="5" x2="35" y2="35" stroke="RGBA(255, 255, 255, 1)" stroke-width="5" stroke-linecap="round"></line>
                   <line x1="5" y1="35" x2="35" y2="5" stroke="RGBA(255, 255, 255, 1)" stroke-width="5" stroke-linecap="round"></line>

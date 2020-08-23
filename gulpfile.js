@@ -5,9 +5,13 @@ const watch = require('gulp-watch');
 const htmlmin = require('gulp-htmlmin');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
+const babel = require('gulp-babel');
 const uglify = require('gulp-uglify-es').default;
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
+const imageminPngquant = require('imagemin-pngquant');
+const imageminJpegRecompress = require('imagemin-jpeg-recompress');
+const imageminSvgo = require('imagemin-svgo');
 const rimraf = require('rimraf');
 
 const path = {
@@ -39,14 +43,17 @@ gulp.task('clean', function (cb) {
 gulp.task('minify', () => {
   return gulp.src(path.src.html)
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest(path.build.html));
+    .pipe(gulp.dest(path.build.html))
 });
 
 gulp.task('uglify', function () {
     return gulp.src(path.src.js)
         .pipe(rename("script.min.js"))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(uglify())
-        .pipe(gulp.dest(path.build.js));
+        .pipe(gulp.dest(path.build.js))
 });
 
 gulp.task('stylebuild', async function () {
@@ -57,11 +64,17 @@ gulp.task('stylebuild', async function () {
         .pipe(gulp.dest(path.build.css))
 });
 
-gulp.task('imagebuild', async function () {
-    gulp.src(path.src.img)
+gulp.task('imagebuild', function () {
+      return gulp.src(path.src.img)
         .pipe(imagemin([
-            imagemin.mozjpeg({quality: 75, progressive: true}),
-            imagemin.optipng({optimizationLevel: 5}),
+           imageminJpegRecompress({
+                progressive: true,
+                max: 80,
+                min: 70
+              }),
+            imageminPngquant({
+                quality: [0.6, 0.8]
+            }),
             imagemin.svgo({
                 plugins: [
                     {removeViewBox: true},
