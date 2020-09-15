@@ -69,11 +69,11 @@ gulp.task('imagebuild', function () {
         .pipe(imagemin([
            imageminJpegRecompress({
                 progressive: true,
-                max: 80,
-                min: 70
+                max: 70,
+                min: 60
               }),
             imageminPngquant({
-                quality: [0.6, 0.8]
+                quality: [0.5, 0.7]
             }),
             imagemin.svgo({
                 plugins: [
