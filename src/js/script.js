@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
-  // Галерея изображений
+// Галерея изображений
 
 let gallery = {
   galleryBox: document.getElementById("JS-gallery-container"),
@@ -180,7 +180,7 @@ let gallery = {
 
 gallery.galleryStart();
 
-  // Модальное окно
+// Модальное окно
 
 function modalOpener() {
 

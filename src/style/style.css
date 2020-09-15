@@ -87,7 +87,7 @@
 }
 
 .logo-box:focus {
-  box-shadow: 0 0 8px black;
+  box-shadow: 0 0 3px black;
 }
 
 .logo-box_image {
@@ -282,7 +282,7 @@
   display: flex;
   width: 715vw;
   height: auto;
-  transition: 0.8s ease-in-out;
+  transition: 0.6s ease-in-out;
   transform: translateX(0);
 }
 
@@ -655,6 +655,7 @@
 
   .go-link_link-text {
     font-size: 16px;
+    text-align: center;
     margin: auto;
   }
 
@@ -694,6 +695,7 @@
 
   .slogan-box_slogan {
     height: 70%;
+    margin: auto;
   }
 
   .main-text-box_item {
