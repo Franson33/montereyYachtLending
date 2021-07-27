@@ -1,3 +1,4 @@
+[![Code Quality Score](https://frontend.code-inspector.com/public/project/25719/montereyYachtLending/dashboard)](https://frontend.code-inspector.com/public/project/25719/montereyYachtLending/dashboard)
 # montereyYachtLending
 Lending page, made to promote a motor yacht Monterey Cruiser 322.
 But it didnt get to the production due to all this quarantine/virus situation. 
